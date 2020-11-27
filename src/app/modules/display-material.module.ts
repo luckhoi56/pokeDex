@@ -12,6 +12,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSelectModule} from '@angular/material/select';
 
 
+
+import {MatCardModule} from '@angular/material/card'; 
 import {MatRippleModule} from '@angular/material/core'; 
 @NgModule({
     imports:[
@@ -24,7 +26,8 @@ import {MatRippleModule} from '@angular/material/core';
         MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
-        MatRippleModule
+        MatRippleModule,
+        MatCardModule
 
     ],
     exports:[
@@ -37,7 +40,8 @@ import {MatRippleModule} from '@angular/material/core';
         MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
-        MatRippleModule
+        MatRippleModule,
+        MatCardModule
         
     ]
 })
