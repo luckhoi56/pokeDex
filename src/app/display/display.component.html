@@ -3,18 +3,22 @@
 <div *ngIf="pokemon">
     <mat-card class="example-card">
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
+          <div mat-card-avatar class="example-header-image" [background-image]='pokemon.sprites.front_default'>
+              
+          </div>
           <mat-card-title>{{pokemon.name}}</mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png" alt="Photo of a pokemon">
+        <img mat-card-image [src]="pokemon.sprites.front_default" alt="Photo of a pokemon">
         <mat-card-content>
           <p>
            
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
+            <button  *ngFor="let type of pokemon.types" mat-stroked-button color="primary">
+                {{type.type.name}}
+            </button>
+          
         </mat-card-actions>
       </mat-card>
       
