@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DisplayComponent } from './display/display.component';
 //import {FormsModule} from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,
