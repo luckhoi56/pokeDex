@@ -1,5 +1,8 @@
-<p>display works!</p>
 <p *ngIf="pokemon">
-    display component {{pokemon.abilities[0].ability.name}}
+    
+    <li *ngFor="let stat of pokemon.stats">
+        {{stat.stat.name}}:{{stat.base_stat}}
+      </li>
 </p>
+
 
