@@ -10,6 +10,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatSidenavModule} from '@angular/material/sidenav'; 
 import {MatSelectModule} from '@angular/material/select';
+
+
+import {MatRippleModule} from '@angular/material/core'; 
 @NgModule({
     imports:[
         MatSliderModule,
@@ -20,7 +23,8 @@ import {MatSelectModule} from '@angular/material/select';
         MatSidenavModule,
         MatFormFieldModule,
         MatInputModule,
-        MatSelectModule
+        MatSelectModule,
+        MatRippleModule
 
     ],
     exports:[
@@ -32,7 +36,8 @@ import {MatSelectModule} from '@angular/material/select';
         MatSidenavModule,
         MatFormFieldModule,
         MatInputModule,
-        MatSelectModule
+        MatSelectModule,
+        MatRippleModule
         
     ]
 })
