@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,Input, EventEmitter } from '@angular/core';
 import {PokemonService} from '../pokemons/pokemon.service'
 
 @Component({
@@ -8,7 +8,15 @@ import {PokemonService} from '../pokemons/pokemon.service'
 })
 export class SearchComponent implements OnInit {
   public m_search_pokemon
-  public m_search_value 
+
+  @Input() public m_search_name:string
+  
+  @Output() valueChange = new EventEmitter<string>()
+  
+  updateValue(value){
+    this.m_search_name = value
+    this.valueChange.emit(this.m_search_name)
+  }
   constructor(
     public pokemon: PokemonService
     ) {
@@ -16,13 +24,17 @@ export class SearchComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.m_search_value = ''
+    
   }
   public search(){
-    this.pokemon.searchPokemon().subscribe(resp =>{
+    console.log("my pokemon" +this.m_search_name)
+    /*
+    this.pokemon.searchPokemon(this.m_search_value).subscribe(resp =>{
       this.m_search_pokemon = resp
       console.log(resp)
     })
+    */
+    
   }
 
 }

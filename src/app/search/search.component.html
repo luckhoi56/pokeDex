@@ -1,6 +1,10 @@
 <p>search works!</p>
 
 <form>
-    <input text="text" [value]="m_search_value">
-    <input type="submit" value="search">
+    <input text="text" [value]="m_search_name" (input)="m_search_name=$event.target.value">
+    <input type="button" (click)="search()" value="search pokemon">
 </form>
+
+<p *ngIf="m_search_name">
+    {{m_search_name}}
+</p>
