@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
-import {FormsModule} from '@angular/forms'
+//import {FormsModule} from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +17,7 @@ import {FormsModule} from '@angular/forms'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    //FormsModule
     
   ],
   providers: [],
