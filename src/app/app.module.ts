@@ -8,7 +8,7 @@ import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DisplayComponent } from './display/display.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-//import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms'
 import {DisplayMaterialModule} from './modules/display-material.module'
 
 @NgModule({
@@ -23,7 +23,7 @@ import {DisplayMaterialModule} from './modules/display-material.module'
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    //FormsModule
+    FormsModule,
     DisplayMaterialModule
     
   ],
