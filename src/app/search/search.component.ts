@@ -22,7 +22,7 @@ export class SearchComponent implements OnInit {
   public search(){
     console.log("my pokemon" +this.m_search_name)
     
-    this.pokemon.searchPokemon(this.m_search_name).subscribe(resp =>{
+    this.pokemon.searchPokemon(this.m_search_name.toLowerCase()).subscribe(resp =>{
       this.m_search_pokemon = resp
       console.log(resp)
     })
