@@ -1,0 +1,34 @@
+
+<mat-card class="example-card">
+    <div class="center">
+      <button mat-stroked-button color="primary" >{{ pokemon.name.toUpperCase() }}</button>
+    </div>
+    
+    <mat-card-header>
+      <div
+        mat-card-avatar
+        class="example-header-image"
+        [style.background-image]="'url(' + pokemon.sprites.front_default + ')'"
+        style="background-size: cover"
+      ></div>
+     
+    </mat-card-header>
+    <img
+      mat-card-image
+      [src]="pokemon.sprites.front_default"
+      alt="Photo of a pokemon"
+    />
+    <mat-card-content>
+      <p></p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button
+        *ngFor="let type of pokemon.types"
+        mat-stroked-button
+        color="primary"
+      >
+        {{ type.type.name }}
+      </button>
+    </mat-card-actions>
+  </mat-card>

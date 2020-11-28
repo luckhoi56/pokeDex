@@ -1,6 +1,7 @@
 <div *ngIf="pokemon">
   
-  <mat-card class="example-card">
+  <!--
+    <mat-card class="example-card">
     <div class="center">
       <button mat-stroked-button color="primary" >{{ pokemon.name.toUpperCase() }}</button>
     </div>
@@ -33,6 +34,8 @@
     </mat-card-actions>
   </mat-card>
 
+  -->
+  <app-sprite-card [pokemon]="pokemon"></app-sprite-card>
   <br />
   <br />
   <div class="pokeStats" *ngFor="let stat of pokemon.stats">
