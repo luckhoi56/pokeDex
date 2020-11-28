@@ -12,7 +12,8 @@ import {FormsModule} from '@angular/forms'
 import {DisplayMaterialModule} from './modules/display-material.module';
 import { SpriteCardComponent } from './sprite-card/sprite-card.component';
 import { StatsbarsComponent } from './statsbars/statsbars.component';
-import { PokemonMovesTableComponent } from './pokemon-moves-table/pokemon-moves-table.component'
+import { PokemonMovesTableComponent } from './pokemon-moves-table/pokemon-moves-table.component';
+import { NotFoundDialogComponent } from './search/not-found-dialog/not-found-dialog.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PokemonMovesTableComponent } from './pokemon-moves-table/pokemon-moves-
     DisplayComponent,
     SpriteCardComponent,
     StatsbarsComponent,
-    PokemonMovesTableComponent
+    PokemonMovesTableComponent,
+    NotFoundDialogComponent
   ],
   imports: [
     BrowserModule,
