@@ -36,20 +36,7 @@
 
   -->
   <app-sprite-card [pokemon]="pokemon"></app-sprite-card>
-  <br />
-  <br />
-  <div class="pokeStats" *ngFor="let stat of pokemon.stats">
-    <button mat-stroked-button color="primary">
-      {{ stat.stat.name }}
-    </button>
-
-    <mat-progress-bar
-      mode="determinate"
-      [value]="stat.base_stat"
-    ></mat-progress-bar>
-    <br />
-    <br />
-  </div>
+  <app-statsbars [pokemon]="pokemon"></app-statsbars>
   <table mat-table [dataSource]="pokemon.abilities" class="mat-elevation-z8">
     <!--- Note that these columns can be defined in any order.
             The actual rendered columns are set as a property on the row definition" -->

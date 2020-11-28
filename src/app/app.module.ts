@@ -10,7 +10,8 @@ import { DisplayComponent } from './display/display.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms'
 import {DisplayMaterialModule} from './modules/display-material.module';
-import { SpriteCardComponent } from './sprite-card/sprite-card.component'
+import { SpriteCardComponent } from './sprite-card/sprite-card.component';
+import { StatsbarsComponent } from './statsbars/statsbars.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SpriteCardComponent } from './sprite-card/sprite-card.component'
     HomeComponent,
     SearchComponent,
     DisplayComponent,
-    SpriteCardComponent
+    SpriteCardComponent,
+    StatsbarsComponent
   ],
   imports: [
     BrowserModule,
