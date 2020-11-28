@@ -14,7 +14,7 @@
 
 
 
-<p>
+<div class="center">
     <mat-form-field appearance="outline">
       <mat-label>Poke Name</mat-label>
       <input matInput placeholder="Ex: Ditto" [value]="m_search_name" (input)="m_search_name=$event.target.value">
@@ -22,6 +22,6 @@
       
     </mat-form-field>
    
-  </p>
+</div>
 
   <app-display [pokemon]="m_search_pokemon"></app-display>   
