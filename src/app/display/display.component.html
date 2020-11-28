@@ -1,100 +1,63 @@
-
-
 <div *ngIf="pokemon">
-    <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image" [background-image]='pokemon.sprites.front_default'>
-              
-          </div>
-          <mat-card-title>{{pokemon.name}}</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image [src]="pokemon.sprites.front_default" alt="Photo of a pokemon">
-        <mat-card-content>
-          <p>
-           
-          </p>
-        </mat-card-content>
-     
-        <mat-card-actions>
-            
-            <button  *ngFor="let type of pokemon.types" mat-stroked-button color="primary">
-                {{type.type.name}}
-            </button>
-          
-        </mat-card-actions>
-      </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div
+        mat-card-avatar
+        class="example-header-image"
+        [background-image]="pokemon.sprites.front_default"
+      ></div>
+      <mat-card-title>{{ pokemon.name }}</mat-card-title>
+    </mat-card-header>
+    <img
+      mat-card-image
+      [src]="pokemon.sprites.front_default"
+      alt="Photo of a pokemon"
+    />
+    <mat-card-content>
+      <p></p>
+    </mat-card-content>
 
-      <br>
-      <br>
-      <div class="pokeStats" *ngFor="let stat of pokemon.stats">
-        <button   mat-stroked-button color="primary">
-                        {{stat.stat.name}}
-        </button>
-      
-        <mat-progress-bar mode="determinate" [value]="stat.base_stat"></mat-progress-bar>
-        <br>
-        <br>
-        </div>
+    <mat-card-actions>
+      <button
+        *ngFor="let type of pokemon.types"
+        mat-stroked-button
+        color="primary"
+      >
+        {{ type.type.name }}
+      </button>
+    </mat-card-actions>
+  </mat-card>
 
+  <br />
+  <br />
+  <div class="pokeStats" *ngFor="let stat of pokemon.stats">
+    <button mat-stroked-button color="primary">
+      {{ stat.stat.name }}
+    </button>
 
-       
-      
-    <mat-grid-list cols="2" rowHeight="2:1">
-       
-        <mat-grid-tile>
-            <!--
-                <div>
-                Stats:
-                <li *ngFor="let stat of pokemon.stats">
-                    {{stat.stat.name}}:{{stat.base_stat}}
-                </li>
-            </div>
-            -->
-         
-           
-            
-           
-        </mat-grid-tile>
-
-        <mat-grid-tile>
-            <div>
-                Types:
-                <li *ngFor="let type of pokemon.types">
-                    {{type.type.name}}
-                </li>
-            </div>
-        </mat-grid-tile>
-
-        <mat-grid-tile>
-            <div>
-                Abilities:
-                <li *ngFor="let ability of pokemon.abilities">
-                    {{ability.ability.name}}
-                </li>
-            </div>
-        </mat-grid-tile>
-        
-        
-    </mat-grid-list>
-      
+    <mat-progress-bar
+      mode="determinate"
+      [value]="stat.base_stat"
+    ></mat-progress-bar>
+    <br />
+    <br />
+  </div>
+  <table mat-table [dataSource]="pokemon.abilities" class="mat-elevation-z8">
+    <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+  
+  
+    <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.ability.name}} </td>
+  </ng-container>
+  
     
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+  
 </div>
 
-
-
-
-<!--
-<div *ngIf="pokemon">
-    
-    
-    <br>
-    
-    <br>
-    
-    
-</div>
-
-
-
-    
--->

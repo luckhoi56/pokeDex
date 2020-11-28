@@ -17,6 +17,9 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 import {MatCardModule} from '@angular/material/card'; 
 import {MatRippleModule} from '@angular/material/core'; 
+
+
+import {MatTableModule} from '@angular/material/table'; 
 @NgModule({
     imports:[
         MatSliderModule,
@@ -30,7 +33,8 @@ import {MatRippleModule} from '@angular/material/core';
         MatSelectModule,
         MatRippleModule,
         MatCardModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatTableModule
 
     ],
     exports:[
@@ -45,7 +49,8 @@ import {MatRippleModule} from '@angular/material/core';
         MatSelectModule,
         MatRippleModule,
         MatCardModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatTableModule
         
     ]
 })
