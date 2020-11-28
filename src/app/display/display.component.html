@@ -21,16 +21,37 @@
           
         </mat-card-actions>
       </mat-card>
+
+      <br>
+      <br>
+      <div class="pokeStats" *ngFor="let stat of pokemon.stats">
+        <button   mat-stroked-button color="primary">
+                        {{stat.stat.name}}
+        </button>
+      
+        <mat-progress-bar mode="determinate" value="45"></mat-progress-bar>
+        <br>
+        <br>
+        </div>
+
+
+       
       
     <mat-grid-list cols="2" rowHeight="2:1">
        
         <mat-grid-tile>
-            <div>
+            <!--
+                <div>
                 Stats:
                 <li *ngFor="let stat of pokemon.stats">
                     {{stat.stat.name}}:{{stat.base_stat}}
                 </li>
             </div>
+            -->
+         
+           
+            
+           
         </mat-grid-tile>
 
         <mat-grid-tile>

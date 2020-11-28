@@ -5,7 +5,11 @@
   margin-left: auto;
   margin-right: auto;
   }
- 
+  .pokeStats{
+    max-width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   
   .example-header-image {
    

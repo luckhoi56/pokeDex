@@ -13,6 +13,8 @@ import {MatSelectModule} from '@angular/material/select';
 
 
 
+import {MatProgressBarModule} from '@angular/material/progress-bar'; 
+
 import {MatCardModule} from '@angular/material/card'; 
 import {MatRippleModule} from '@angular/material/core'; 
 @NgModule({
@@ -27,7 +29,8 @@ import {MatRippleModule} from '@angular/material/core';
         MatInputModule,
         MatSelectModule,
         MatRippleModule,
-        MatCardModule
+        MatCardModule,
+        MatProgressBarModule
 
     ],
     exports:[
@@ -41,7 +44,8 @@ import {MatRippleModule} from '@angular/material/core';
         MatInputModule,
         MatSelectModule,
         MatRippleModule,
-        MatCardModule
+        MatCardModule,
+        MatProgressBarModule
         
     ]
 })
