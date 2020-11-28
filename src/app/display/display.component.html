@@ -14,7 +14,9 @@
            
           </p>
         </mat-card-content>
+     
         <mat-card-actions>
+            
             <button  *ngFor="let type of pokemon.types" mat-stroked-button color="primary">
                 {{type.type.name}}
             </button>
@@ -29,7 +31,7 @@
                         {{stat.stat.name}}
         </button>
       
-        <mat-progress-bar mode="determinate" value="45"></mat-progress-bar>
+        <mat-progress-bar mode="determinate" [value]="stat.base_stat"></mat-progress-bar>
         <br>
         <br>
         </div>
