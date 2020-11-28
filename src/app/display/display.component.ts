@@ -12,8 +12,7 @@ export interface PeriodicElement {
   styleUrls: ['./display.component.css']
 })
 export class DisplayComponent implements OnInit {
-  displayedColumns: string[] = [ 'name'];
-  dataSource = '';
+  
   @Input() pokemon:any;
   constructor() { }
 

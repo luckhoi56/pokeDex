@@ -11,7 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms'
 import {DisplayMaterialModule} from './modules/display-material.module';
 import { SpriteCardComponent } from './sprite-card/sprite-card.component';
-import { StatsbarsComponent } from './statsbars/statsbars.component'
+import { StatsbarsComponent } from './statsbars/statsbars.component';
+import { PokemonMovesTableComponent } from './pokemon-moves-table/pokemon-moves-table.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StatsbarsComponent } from './statsbars/statsbars.component'
     SearchComponent,
     DisplayComponent,
     SpriteCardComponent,
-    StatsbarsComponent
+    StatsbarsComponent,
+    PokemonMovesTableComponent
   ],
   imports: [
     BrowserModule,

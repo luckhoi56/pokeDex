@@ -37,22 +37,7 @@
   -->
   <app-sprite-card [pokemon]="pokemon"></app-sprite-card>
   <app-statsbars [pokemon]="pokemon"></app-statsbars>
-  <table mat-table [dataSource]="pokemon.abilities" class="mat-elevation-z8">
-    <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
-  
-  
-    <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> <button mat-stroked-button color="primary">Move </button> </th>
-    <td mat-cell *matCellDef="let element"> {{element.ability.name}} </td>
-  </ng-container>
-  
-    
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table>
+  <app-pokemon-moves-table [pokemon]="pokemon"></app-pokemon-moves-table>
   
 </div>
 
