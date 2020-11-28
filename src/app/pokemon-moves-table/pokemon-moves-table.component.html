@@ -1,16 +1,15 @@
 <table mat-table [dataSource]="pokemon.abilities" class="mat-elevation-z8">
-    <!--- Note that these columns can be defined in any order.
+  <!--- Note that these columns can be defined in any order.
             The actual rendered columns are set as a property on the row definition" -->
-  
-  
-    <!-- Name Column -->
+
+  <!-- Name Column -->
   <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> <button mat-stroked-button color="primary">Move </button> </th>
-    <td mat-cell *matCellDef="let element"> {{element.ability.name}} </td>
+    <th mat-header-cell *matHeaderCellDef>
+      <button mat-stroked-button color="primary">Move</button>
+    </th>
+    <td mat-cell *matCellDef="let element">{{ element.ability.name }}</td>
   </ng-container>
-  
-    
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

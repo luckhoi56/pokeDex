@@ -1,14 +1,14 @@
 <br />
-  <br />
-  <div class="pokeStats" *ngFor="let stat of pokemon.stats">
-    <button mat-stroked-button color="primary">
-      {{ stat.stat.name }}
-    </button>
+<br />
+<div class="pokeStats" *ngFor="let stat of pokemon.stats">
+  <button mat-stroked-button color="primary">
+    {{ stat.stat.name }}
+  </button>
 
-    <mat-progress-bar
-      mode="determinate"
-      [value]="stat.base_stat"
-    ></mat-progress-bar>
-    <br />
-    <br />
-  </div>
+  <mat-progress-bar
+    mode="determinate"
+    [value]="stat.base_stat"
+  ></mat-progress-bar>
+  <br />
+  <br />
+</div>

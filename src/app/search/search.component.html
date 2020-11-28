@@ -1,27 +1,14 @@
-<!-- 
-<p>search works!</p>
-
-<form>
-<input text="text" [value]="m_search_name" (input)="m_search_name=$event.target.value">
-<input type="button" (click)="search()" value="search pokemon">
-</form>
-
-<p *ngIf="m_search_pokemon">
-{{m_search_pokemon.abilities[0].ability.name}}
-</p>
-
-<app-display [pokemon]="m_search_pokemon"></app-display>   -->
-
-
-
 <div class="center">
-    <mat-form-field appearance="outline">
-      <mat-label>Poke Name</mat-label>
-      <input matInput placeholder="Ex: Ditto" [value]="m_search_name" (input)="m_search_name=$event.target.value">
-      <mat-icon matRipple  matSuffix (click)="search()">search</mat-icon>
-      
-    </mat-form-field>
-   
+  <mat-form-field appearance="outline">
+    <mat-label>Poke Name</mat-label>
+    <input
+      matInput
+      placeholder="Ex: Ditto"
+      [value]="m_search_name"
+      (input)="m_search_name = $event.target.value"
+    />
+    <mat-icon matRipple matSuffix (click)="search()">search</mat-icon>
+  </mat-form-field>
 </div>
 
-  <app-display [pokemon]="m_search_pokemon"></app-display>   
+<app-display [pokemon]="m_search_pokemon"></app-display>
