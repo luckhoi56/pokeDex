@@ -9,10 +9,15 @@ If you want to add/ remove any library component. You can modify this file
 
 The library I use is: [Angular Material](https://material.angular.io/components)
 ```dot
-diagraph G{
-    DOM -> Home
-    DOM -> Search
+digraph G{
+    App -> Home [label="Router Link"]
+    App -> Search 
+    Search -> Display
+    Display->SpriteCard
+    Display->StatBars
+    Display->MovesTable
 }
 
 
 ```
+
