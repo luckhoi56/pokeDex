@@ -14,8 +14,10 @@ The library I use is: [Angular Material](https://material.angular.io/components)
 To run this project:
 First download the source code using :
 `git clone --recursive https://github.com/luckhoi56/pokeDex`
+
 Then, go to your project folder, type:
 `npm update` to download all the dependencies
+
 Last:
 `ng serve`
 
